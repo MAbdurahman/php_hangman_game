@@ -12,6 +12,13 @@
     echo $wordLength;
     echo "<br>";
 
-    for($i = 1; $i <= $wordLength; $i++){
-        echo "_ ";
+    $guesses = ["a", "e", "i", "o", "u"];
+
+    for($i = 0; $i < $wordLength; $i++){
+        if(in_array($word[$i], $guesses)){
+            echo $word[$i];
+        } else {
+            echo "_";
+        }
+        echo " ";
     }
